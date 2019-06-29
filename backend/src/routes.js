@@ -11,6 +11,7 @@ import {
   FileController,
   ProviderController,
   AppointmentController,
+  ScheduleController,
 } from './app/controllers'
 
 const routes = new Router()
@@ -27,6 +28,8 @@ routes.get('/providers', ProviderController.index)
 
 routes.get('/appointments', AppointmentController.index)
 routes.post('/appointments', AppointmentController.store)
+
+routes.get('/schedule', ScheduleController.index)
 
 routes.post('/files', upload.single('file'), FileController.store)
 

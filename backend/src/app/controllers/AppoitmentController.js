@@ -42,7 +42,9 @@ class AppointmentController {
 
   async store(req, res) {
     const schema = Yup.object().shape({
-      provider_id: Yup.number().required(),
+      provider_id: Yup.number()
+        .required()
+        .notOneOf([req.userId]),
       date: Yup.date().required(),
     })
 
@@ -104,11 +106,9 @@ class AppointmentController {
      * Notify appointment provider
      */
     const user = await User.findByPk(req.userId)
-    const formatedDate = format(
-      hourStart,
-      "'dia' dd 'de' MMMM', às' H:mm'h'",
-      { locale: pt }
-    )
+    const formatedDate = format(hourStart, "'dia' dd 'de' MMMM', às' H:mm'h'", {
+      locale: pt,
+    })
 
     await Notification.create({
       content: `Novo agendamento de ${user.name} para o ${formatedDate}.`,

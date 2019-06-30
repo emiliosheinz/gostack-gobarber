@@ -13,6 +13,7 @@ import {
   AppointmentController,
   ScheduleController,
   NotificationController,
+  AvailableController,
 } from './app/controllers'
 
 const routes = new Router()
@@ -26,6 +27,7 @@ routes.use(authMiddleware)
 routes.put('/users', UserController.update)
 
 routes.get('/providers', ProviderController.index)
+routes.get('/providers/:providerId/available', AvailableController.index)
 
 routes.get('/appointments', AppointmentController.index)
 routes.post('/appointments', AppointmentController.store)

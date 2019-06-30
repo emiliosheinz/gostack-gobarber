@@ -5,6 +5,7 @@ import ProviderController from './ProviderController'
 import AppointmentController from './AppoitmentController'
 import ScheduleController from './ScheduleController'
 import NotificationController from './NotificationController'
+import AvailableController from './AvailableController'
 
 export {
   SessionController,
@@ -14,4 +15,5 @@ export {
   AppointmentController,
   ScheduleController,
   NotificationController,
+  AvailableController,
 }

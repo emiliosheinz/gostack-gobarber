@@ -12,8 +12,6 @@ class CancellationMail {
     const { appointment } = data
     const { provider, user, date } = appointment
 
-    console.log('A fila executou')
-
     await Mail.sendMail({
       to: `${provider.name} <${provider.email}>`,
       subject: 'Agendamento cancelado',

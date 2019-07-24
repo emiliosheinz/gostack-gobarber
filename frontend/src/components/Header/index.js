@@ -10,7 +10,7 @@ export default function Header() {
     <Container>
       <Content>
         <nav>
-          <img src='logo' alt='GoBarber logo' />
+          <img src={logo} alt='GoBarber logo' />
           <Link to='/dashboard'>DASHBOARD</Link>
         </nav>
         <aside>

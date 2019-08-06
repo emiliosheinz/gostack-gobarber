@@ -6,7 +6,7 @@ import { Container, GbInput } from './styles'
 
 function Input({ style, icon, ...otherProps }, ref) {
   return (
-    <Container styles={style}>
+    <Container style={style}>
       {icon && <Icon name={icon} size={20} color='rgba(255, 255, 255, 0.6)' />}
       <GbInput {...otherProps} ref={ref} />
     </Container>

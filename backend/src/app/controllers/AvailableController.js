@@ -16,12 +16,12 @@ class AvailableController {
     const { date } = req.query
 
     if (!date) {
-      return res.satus(400).json({ message: 'Invalid dade.' })
+      return res.status(400).json({ message: 'Invalid dade.' })
     }
 
     const searchedDate = Number(date)
 
-    const appointments = await Appointment.finddAll({
+    const appointments = await Appointment.findAll({
       where: {
         provider_id: req.params.providerId,
         canceled_at: null,

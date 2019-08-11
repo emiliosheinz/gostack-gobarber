@@ -51,6 +51,7 @@ class AppointmentController {
       date: Yup.date().required(),
     })
 
+    console.log('SOMETHING', req.body)
     if (!(await schema.isValid(req.body))) {
       return res
         .status(400)

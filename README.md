@@ -1,2 +1,2 @@
-# gostack-gobarber
-:scissors: Application builded during the Rocketseat bootcamp with React, React Native and NodeJS, where you can schedule a barber time and the barber can organize his agenda looking the scheduled and canceled users. There is a diferent login to both type of users, barber and not barber. The barbers can only get his dashboard accessing the application from the web, the user can only schedule a barber via a app.
+# :scissors: gostack-gobarber
+Application builded during the Rocketseat bootcamp with React, React Native and NodeJS, where you can schedule a barber time and the barber can organize his agenda looking the scheduled and canceled users. There is a diferent login to both type of users, barber and not barber. The barbers can only get his dashboard accessing the application from the web, the user can only schedule a barber via a app.
